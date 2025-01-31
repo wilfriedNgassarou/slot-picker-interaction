@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Day } from "./interfaces/day.interface"
 import { initialsDays } from "./lib/placeholder-data"
 import { Card } from "./components/card"
+import { Credits } from "./components/credits"
 
 function App() {
   const [selectedDayId, setSelectedDayId] = useState<string | null>(null)
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <section className="w-full min-h-dvh overflow-y-auto flex flex-col items-center justify-center gap-y-2">
+      <Credits />
       {days.map((day) => (
         <Card
           key={day.id}
